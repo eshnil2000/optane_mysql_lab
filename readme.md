@@ -1,6 +1,6 @@
 # adventure-time
 
-a web UI to connect to docker-browser-ser
+a web UI to connect to docker-browser-server
 
 ## examples
 
