@@ -1,0 +1,7 @@
+var adventureTime = require('./')
+
+adventureTime({
+  guide: "http://maxogden.github.io/get-dat/guide",
+  server: "ec2-34-215-1-92.us-west-2.compute.amazonaws.com:8080",
+  id: Math.random().toString(36).slice(2)
+})
