@@ -1,21 +1,22 @@
 # adventure-time
 
-a web UI for doing nodeschool adventures in the browser
+a web UI to connect to docker-browser-ser
 
 ## examples
 
 here are some projects based on this
 
-- https://github.com/maxogden/get-dat
-- https://github.com/cdaringe/try-npm-guide
+- http://ec2-34-215-1-92.us-west-2.compute.amazonaws.com/
 
-![screenshot](screenshot.png)
+###Prerequisites
+- Server setup with Ubuntu 16.04
+- Ports opened (80, 443, 8080)
 
 ### run the demo
 
 - install docker (docker for linux, boot2docker for mac/windows)
 - install and run https://github.com/mafintosh/docker-browser-server
-- install and run https://github.com/maxogden/adventure-time (the demo uses get-dat content but you can swap in your own)
+- install and run this repo
 
 ### example
 
@@ -25,8 +26,8 @@ use with browserify
 var adventureTime = require('adventure-time')
 
 adventureTime({
-  guide: "http://maxogden.github.io/get-dat/guide",
-  server: "try-dat.com",
+  guide: "http://ec2-34-215-1-92.us-west-2.compute.amazonaws.com/guide",
+  server: "http://ec2-34-215-1-92.us-west-2.compute.amazonaws.com/:8080",
   id: Math.random().toString(36).slice(2)
 })
 ```
