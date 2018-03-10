@@ -7,9 +7,11 @@ a web UI to connect to docker-browser-server
 ## examples
 
 here are some projects based on this
+
 #This is an instance on AWS
-- http://ec2-34-215-1-92.us-west-2.compute.amazonaws.com/
-#This is an instance on Packet
+- http://ec2-34-215-1-92.us-west-2.compute.amazonaws.com (with terminal & guide)
+
+#This is an instance on Packet.net (simple terminal interface only)
 - http://147.75.88.22:443
 
 ###Prerequisites
