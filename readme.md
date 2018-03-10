@@ -50,7 +50,11 @@ sudo apt-get install npm --assume-yes
 
 sudo npm install -g browserify
 
+#run this in /var/www/html
+git clone https://github.com/eshnil2000/optane_mysql_lab
 sudo npm install #run this in /var/www/html to install dependencies
+
+sudo npm install -g docker-browser-server
 
 ##Create a basic dockerfile which:
 #1. Starts from Ubuntu container with exposed filesystem
@@ -65,13 +69,12 @@ WORKDIR /root
 ENTRYPOINT cat welcome.txt && /bin/bash
 #####
 
-docker build -t optane . #this sets up container
-
-npm install -g docker-browser-server
+docker build -t optane . #this sets up container, names it optane
 
 sudo apt-get install apache2
 
-###Modify demo.js 
+
+###Modify demo.js , substitute server address with your server IP
 var adventureTime = require('./')
 
 adventureTime({
@@ -84,9 +87,16 @@ adventureTime({
 browserify demo.js -o demo-bundle.js # this sets up node modules to run in browser
 browserify demo-terminal.js -o demo-terminal-bundle.js
 
+sudo apt-get install apache2
+
+sudo nohup docker-browser-server optane --port 443 &
+
 ```
 
-### run the demo
+# Now the setup is ready, browse to 
+ec2-34-215-1-92.us-west-2.compute.amazonaws.com # substitute with your server address
+
+### run the demo summary steps
 
 - install docker (docker for linux, boot2docker for mac/windows)
 - install and run https://github.com/mafintosh/docker-browser-server
