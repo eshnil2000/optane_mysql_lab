@@ -117,3 +117,23 @@ adventureTime({
 ```
 
 see `demo.js`, `demo-terminal.js`, `index.html` and `terminal.html` for more details.
+
+# To monitor container stats, use cAdvisor
+
+# https://github.com/google/cadvisor
+
+# Run the following container
+
+```
+sudo docker run \
+  --volume=/:/rootfs:ro \
+  --volume=/var/run:/var/run:rw \
+  --volume=/sys:/sys:ro \
+  --volume=/var/lib/docker/:/var/lib/docker:ro \
+  --volume=/dev/disk/:/dev/disk:ro \
+  --publish=8080:8080 \
+  --detach=true \
+  --name=cadvisor \
+  google/cadvisor:latest
+
+```
