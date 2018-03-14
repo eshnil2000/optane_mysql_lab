@@ -137,3 +137,8 @@ sudo docker run \
   google/cadvisor:latest
 
 ```
+
+## To view stats, go to :
+
+http://ec2-34-215-1-92.us-west-2.compute.amazonaws.com:8080
+
