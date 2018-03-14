@@ -1,0 +1,5 @@
+FROM maxogden/docker-adventure-time
+ADD welcome.txt /root
+WORKDIR /root
+ENTRYPOINT cat welcome.txt && /bin/bash
+
